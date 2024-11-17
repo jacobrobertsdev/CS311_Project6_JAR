@@ -36,19 +36,24 @@ toggles.forEach(button => button.addEventListener('click', () => {
 // Calculate total position
 calculateBtn.addEventListener('click', () => {
     // Assets
-    let assetsTotal = inputCalculator(currentAssets) + inputCalculator(investEquip) + inputCalculator(intangibles);
-    currentAssetsDisplay.textContent = `$${inputCalculator(currentAssets).toFixed(2)}`;
-    investEquipDisplay.textContent = `$${inputCalculator(investEquip).toFixed(2)}`;
-    intangiblesDisplay.textContent = `$${inputCalculator(intangibles).toFixed(2)}`;
+    const currentAssetsTotal = inputCalculator(currentAssets);
+    const investEquipTotal = inputCalculator(investEquip);
+    const intangiblesTotal = inputCalculator(intangibles);
+    const assetsTotal = currentAssetsTotal + investEquipTotal + intangiblesTotal;
+    currentAssetsDisplay.textContent = `$${currentAssetsTotal.toFixed(2)}`;
+    investEquipDisplay.textContent = `$${investEquipTotal.toFixed(2)}`;
+    intangiblesDisplay.textContent = `$${intangiblesTotal.toFixed(2)}`;
 
     // Liabilities
-    let liabilitiesTotal = inputCalculator(currentLiabilities) + inputCalculator(longTermLiabilities);
-    currentLiabilitiesDisplay.textContent = `$${inputCalculator(currentLiabilities).toFixed(2)}`;
-    ltLiabilitiesDisplay.textContent = `$${inputCalculator(longTermLiabilities).toFixed(2)}`;
+    const currentLiabilitiesTotal = inputCalculator(currentLiabilities);
+    const longTermLiabilitiesTotal = inputCalculator(longTermLiabilities);
+    const liabilitiesTotal = currentLiabilitiesTotal + longTermLiabilitiesTotal;
+    currentLiabilitiesDisplay.textContent = `$${currentLiabilitiesTotal.toFixed(2)}`;
+    ltLiabilitiesDisplay.textContent = `$${longTermLiabilitiesTotal.toFixed(2)}`;
 
     // Total position
     totalAssets.textContent = `$${assetsTotal.toFixed(2)}`;
     totalLiabilities.textContent = `$${liabilitiesTotal.toFixed(2)}`;
     totalPosition.textContent = `$${(assetsTotal - liabilitiesTotal).toFixed(2)}`;
 
-})
+});
