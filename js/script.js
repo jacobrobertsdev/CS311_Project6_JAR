@@ -21,9 +21,7 @@ const totalPosition = document.querySelector('.total-position');
 
 // Helper function to calculate input totals
 function inputCalculator(elements) {
-    let total = 0;
-    elements.forEach(input => total += Number(input.value));
-    return total;
+    return [...elements].reduce((total, input) => total += Number(input.value), 0);
 }
 
 // Set up toggling for buttons & forms
@@ -37,18 +35,14 @@ toggles.forEach(button => button.addEventListener('click', () => {
 
 // Calculate total position
 calculateBtn.addEventListener('click', () => {
-
     // Assets
     let assetsTotal = inputCalculator(currentAssets) + inputCalculator(investEquip) + inputCalculator(intangibles);
-
     currentAssetsDisplay.textContent = `$${inputCalculator(currentAssets).toFixed(2)}`;
     investEquipDisplay.textContent = `$${inputCalculator(investEquip).toFixed(2)}`;
     intangiblesDisplay.textContent = `$${inputCalculator(intangibles).toFixed(2)}`;
 
-
     // Liabilities
     let liabilitiesTotal = inputCalculator(currentLiabilities) + inputCalculator(longTermLiabilities);
-
     currentLiabilitiesDisplay.textContent = `$${inputCalculator(currentLiabilities).toFixed(2)}`;
     ltLiabilitiesDisplay.textContent = `$${inputCalculator(longTermLiabilities).toFixed(2)}`;
 
