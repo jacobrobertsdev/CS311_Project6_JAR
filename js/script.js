@@ -26,17 +26,13 @@ function inputCalculator(elements) {
     return total;
 }
 
-// Set up event listeners for toggle buttons
-function toggleButtons() {
-    toggles.forEach(button => button.addEventListener('click', (e) => {
-        let target = e.target;
-        let currentForm = target.closest('div').querySelector('form');
-        currentForm.classList.toggle('hidden');
-        target.classList.toggle('hidden');
-        calculateBtn.classList.remove('hidden');
-    }));
-}
-toggleButtons();
+// Set up toggling for buttons & forms
+toggles.forEach(button => button.addEventListener('click', () => {
+    let form = button.closest('div').querySelector('form');
+    form.classList.toggle('hidden');
+    button.classList.toggle('hidden');
+    calculateBtn.classList.remove('hidden');
+}));
 
 
 // Calculate total position
