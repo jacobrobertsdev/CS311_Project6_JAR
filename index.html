@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./css/styles.css">
+    <title>Bellarmine Financials - Balance Sheet Calculator</title>
+</head>
+
+<body>
+    <header>
+        <h1>
+            Bellarmine Financials - Balance Sheet Calculator
+        </h1>
+    </header>
+    <main>
+        <section class="left-column">
+            <h2>Assets</h2>
+            <div class="current-assets">
+                <h3>Current Assets</h3>
+                <button class="toggle-btn">Add Current Assets</button>
+                <form action="#" class="hidden">
+                    <label for="cash">Cash:</label>
+                    <input type="number" step="any" placeholder="Enter amount" name="cash" id="cash">
+                    <label for="inventory">Inventory:</label>
+                    <input type="number" step="any" placeholder="Enter amount" name="inventory" id="inventory">
+                    <label for="supplies">Supplies:</label>
+                    <input type="number" step="any" placeholder="Enter amount" name="supplies" id="supplies">
+                    <label for="temp-1">Temporary Investments:</label>
+                    <input type="number" step="any" placeholder="Enter amount" name="temp-1" id="temp-1">
+                    <p>Total Current Assets: <span class="current-assets-display">$0.00</span></p>
+                </form>
+            </div>
+            <div class="investments-equipment">
+                <h3>Investment Property & Equipment</h3>
+                <button class="toggle-btn">Add IP & E</button>
+
+                <form action="#" class="hidden">
+                    <label for="land">Land:</label>
+                    <input type="number" step="any" placeholder="Enter amount" name="land" id="land">
+                    <label for="building">Building & Improvements:</label>
+                    <input type="number" step="any" placeholder="Enter amount" name="building" id="building">
+                    <label for="equipment">Equipment:</label>
+                    <input type="number" step="any" placeholder="Enter amount" name="equipment" id="equipment">
+                    <label for="temp-2">Temporary Investments:</label>
+                    <input type="number" step="any" placeholder="Enter amount" name="temp-2" id="temp-2">
+                    <p>Total IP & E: <span class="invest-equip-display">$0.00</span></p>
+                </form>
+            </div>
+            <div class="intangibles">
+                <h3>Intangibles</h3>
+                <button class="toggle-btn">Add Intangibles</button>
+
+                <form action="#" class="hidden">
+                    <label for="trade">Trade Names:</label>
+                    <input type="number" step="any" placeholder="Enter amount" name="trade" id="trade">
+                    <label for="goodwill">Goodwill:</label>
+                    <input type="number" step="any" placeholder="Enter amount" name="goodwill" id="goodwill">
+                    <p>Total Intangibles: <span class="intangibles-display">$0.00</span></p>
+                </form>
+            </div>
+        </section>
+
+        <section class="right-column">
+            <h2>Liabilities</h2>
+            <div class="current-liabilities">
+                <h3>Current Liabilities</h3>
+                <button class="toggle-btn">Add Current Liabilities</button>
+
+                <form action="#" class="hidden">
+                    <label for="accounts">Accounts Payable:</label>
+                    <input type="number" step="any" placeholder="Enter amount" name="accounts" id="accounts">
+                    <label for="notes-1">Notes Payable:</label>
+                    <input type="number" step="any" placeholder="Enter amount" name="notes-1" id="notes-1">
+                    <label for="interest">Interest Payable:</label>
+                    <input type="number" step="any" placeholder="Enter amount" name="interest" id="interest">
+                    <label for="wages">Wages Payable:</label>
+                    <input type="number" step="any" placeholder="Enter amount" name="wages" id="wages">
+                    <label for="accrued">Accrued Expenses:</label>
+                    <input type="number" step="any" placeholder="Enter amount" name="accrued" id="accrued">
+                    <p>Total Current Liabilities: <span class="current-liabilities-display">$0.00</span></p>
+                </form>
+            </div>
+            <div class="long-term">
+                <h3>Long-Term Liabilities</h3>
+                <button class="toggle-btn">Add Long-Term Liabilities</button>
+
+                <form action="#" class="hidden">
+                    <label for="notes-2">Notes Payable:</label>
+                    <input type="number" step="any" placeholder="Enter amount" name="notes-2" id="notes-2">
+                    <label for="bonds">Bonds Payable:</label>
+                    <input type="number" step="any" placeholder="Enter amount" name="bonds" id="bonds">
+                    <p>Total Long-Term Liabilities: <span class="lt-liabilities-display">$0.00</span></p>
+                </form>
+            </div>
+            <div class="position">
+                <h3>Total Position</h3>
+                <button class="calculate-position hidden">Calculate Position</button>
+                <p>Total Assets: <span class="total-assets">$0.00</span></p>
+                <p>Total Liabilities: <span class="total-liabilities">$0.00</span></p>
+                <p>Position: <span class="total-position">$0.00</span></p>
+            </div>
+        </section>
+    </main>
+    <footer>
+        &copy; Bellarmine University 2024
+    </footer>
+
+    <script src="./js/script.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,94 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+    position: relative;
+    height: 100vh;
+    background-color: goldenrod;
+}
+
+.hidden {
+    display: none;
+}
+
+header {
+    width: 100vw;
+    padding: .7rem 1rem;
+    font-size: .75rem;
+    background-color: rgb(103, 0, 0);
+    color: white;
+}
+
+main {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
+
+
+.left-column>div,
+.right-column>div {
+    display: flex;
+    flex-direction: column;
+    font-size: .8rem;
+    padding: 1rem;
+    font-weight: 600;
+}
+
+.right-column>.position>p {
+    margin-top: .5rem;
+}
+
+.position {
+    margin-bottom: 3rem;
+}
+
+h2 {
+    width: 100%;
+    background-color: black;
+    color: white;
+    font-size: 1rem;
+    padding: .75rem 1rem;
+}
+
+form {
+    width: 40%;
+    align-self: flex-end;
+    display: flex;
+    flex-direction: column;
+    gap: .25rem;
+}
+
+input {
+    padding: .3rem
+}
+
+button {
+    width: 15rem;
+    margin: 1rem 0;
+    padding: .25rem
+}
+
+footer {
+    position: fixed;
+    bottom: 0;
+    width: 100vw;
+    padding: .75rem 1rem;
+    background-color: rgb(103, 0, 0);
+    color: white;
+}
+
+@media (max-width: 768px) {
+    main {
+        grid-template-columns: 1fr;
+    }
+
+    form {
+        align-self: flex-start;
+        margin: 1rem;
+        width: 90%;
+    }
+}
